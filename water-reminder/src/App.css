@@ -1,0 +1,533 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #0f2a43;
+  background: #f0f9ff;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+/* =========================
+   MAIN APP
+========================= */
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f8fafc 55%, #ecfeff 100%);
+  padding: 40px 20px;
+  transition: 0.3s ease;
+}
+
+.container {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0284c7;
+}
+
+.logo:first-letter {
+  font-size: 25px;
+}
+
+.theme-button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+
+.theme-button:hover {
+  transform: scale(1.08);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #0284c7;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.header h1 {
+  margin: 0;
+  color: #0f2a43;
+  font-size: clamp(36px, 8vw, 54px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.subtitle {
+  max-width: 500px;
+  margin: 15px auto 0;
+  color: #021a31;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  padding: 30px;
+  margin-bottom: 18px;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+/* =========================
+   TRACKER
+========================= */
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  margin: 0 0 6px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.progress-header h2 {
+  margin: 0;
+  color: #0f2a43;
+  font-size: 22px;
+}
+
+.percentage {
+  color: #0284c7;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.progress-background {
+  height: 13px;
+  margin: 24px 0 30px;
+  background: #e2e8f0;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0284c7, #06b6d4);
+  border-radius: 50px;
+  transition: width 0.4s ease;
+}
+
+.water-display {
+  text-align: center;
+  padding: 10px 0 20px;
+}
+
+.glass-icon {
+  font-size: 48px;
+}
+
+.glass-number {
+  margin-top: 4px;
+  color: #0f2a43;
+  font-size: 58px;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.water-display p {
+  margin: 8px 0 0;
+  color: #64748b;
+}
+
+.remaining {
+  text-align: center;
+  margin: 10px 0;
+  color: #64748b;
+}
+
+.success {
+  margin: 10px 0;
+  padding: 14px;
+  border-radius: 14px;
+  background: #ecfdf5;
+  color: #047857;
+  text-align: center;
+  font-weight: 700;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.primary-button {
+  flex: 1;
+  padding: 15px 20px;
+  border-radius: 14px;
+  background: #0284c7;
+  color: white;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.25);
+}
+
+.primary-button:hover {
+  background: #0369a1;
+}
+
+.secondary-button {
+  min-width: 60px;
+  padding: 12px 15px;
+  border-radius: 14px;
+  background: #f1f5f9;
+  color: #334155;
+  font-weight: 700;
+}
+
+/* =========================
+   REMINDER CARD
+========================= */
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-heading h2 {
+  margin: 0;
+  color: #2d1a72;
+  font-size: 19px;
+}
+
+.notification-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #e0f2fe;
+  font-size: 21px;
+}
+
+.reminder-settings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0 15px;
+  gap: 15px;
+}
+
+.reminder-settings label {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.reminder-settings select {
+  padding: 11px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: white;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.reminder-toggle {
+  width: 100%;
+  padding: 14px;
+  border-radius: 13px;
+  background: #f1f5f9;
+  color: #334155;
+  font-weight: 800;
+}
+
+.reminder-toggle.active {
+  background: #0284c7;
+  color: white;
+}
+
+.next-reminder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 13px;
+  background: #f0f9ff;
+}
+
+.next-reminder span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.next-reminder strong {
+  color: #0284c7;
+  font-size: 20px;
+}
+
+.notification-note {
+  margin: 12px 0 0;
+  color: #94a3b8;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* =========================
+   GOAL SETTINGS
+========================= */
+
+.goal-setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goal-setting h2 {
+  margin: 0;
+  color: #0f2a43;
+  font-size: 23px;
+}
+
+.goal-setting p {
+  margin: 5px 0 0;
+  
+  color: #0f2a43;
+
+  font-size: 13px;
+}
+
+.goal-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.goal-buttons button {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #e0f2fe;
+  color: #0284c7;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* =========================
+   TIP
+========================= */
+
+.tip {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.tip > span {
+  font-size: 25px;
+}
+
+.tip strong {
+  color: #334155;
+}
+
+.tip p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 25px 0 5px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.app.dark {
+  color: #e2e8f0;
+  background: linear-gradient(135deg, #0f172a, #111827, #082f49);
+}
+
+.dark .header h1,
+.dark .progress-header h2,
+.dark .glass-number,
+.dark .goal-setting h2 {
+  color: #ffffff;
+}
+
+.dark .logo {
+  color: #38bdf8;
+}
+
+.dark .subtitle,
+.dark .water-display p,
+.dark .remaining,
+.dark .goal-setting p {
+   color: #94a3b8;
+}
+
+.dark .card {
+  background: rgba(15, 23, 42, 0.88);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark .theme-button {
+  background: #1e293b;
+}
+
+.dark .secondary-button {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+.dark .reminder-settings label {
+  color: #cbd5e1;
+}
+
+.dark .reminder-settings select {
+  background: #1e293b;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+.dark .reminder-toggle {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+.dark .notification-icon,
+.dark .goal-buttons button {
+  background: #082f49;
+}
+
+.dark .next-reminder {
+  background: #082f49;
+}
+
+.dark .tip {
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.dark .tip strong {
+  color: #e2e8f0;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .app {
+    padding: 25px 14px;
+  }
+
+  .header-top {
+    margin-bottom: 25px;
+  }
+
+  .card {
+    padding: 22px 18px;
+    border-radius: 20px;
+  }
+
+  .action-buttons {
+    flex-wrap: wrap;
+  }
+
+  .primary-button {
+    order: -1;
+    flex-basis: 100%;
+  }
+
+  .reminder-settings {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .reminder-settings select {
+    width: 100%;
+  }
+
+  .glass-number {
+    font-size: 50px;
+  }
+
+
+.dark .card-heading h2 {
+  color: #f8fafc;
+}
+}
