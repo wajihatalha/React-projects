@@ -1,16 +1,53 @@
-# React + Vite
+# 💧 Quench — Water Reminder
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> Stay hydrated. Stay on track.
 
-Currently, two official plugins are available:
+Quench is a simple and interactive water reminder web app built with **React** and **Vite**. It helps you track your daily water intake, set hydration goals, and build a consistent hydration routine.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##   Features
 
-## React Compiler
+-  **Water Intake Tracking**: Track the amount of water you drink throughout the day.
+-  **Daily Hydration Goal**: Set and update your personal daily water goal.
+-  **Progress Tracking**: Visualize your progress toward your daily hydration target.
+-  **Timer Reminders**: Get reminders to drink water throughout the day.
+-  **Day & Night Themes**: Switch between light and dark themes for a comfortable experience.
+-  **Progress Reset**: Reset your daily water intake when needed.
+-  **Responsive Design**: Designed to work across different screen sizes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+##   Built With
 
-## Expanding the Oxlint configuration
+- **React**
+- **Vite**
+- **JavaScript**
+- **CSS**
+- **Vercel** — Deployment
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+##   Live Demo
+
+**[Try Quench Live](https://quench-water-reminder-app.vercel.app/)**
+
+##   Screenshots
+
+###   Day Theme
+
+![Quench day theme](day-theme.png)
+
+###   Night Theme
+
+![Quench night theme](night-theme.png)
+
+###   Hydration Progress
+
+![Quench progress](progress-tracker.png)
+
+##    Run Locally
+
+Want to run Quench on your own machine?
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/wajihatalha/React-projects.git
+cd React-projects/water-reminder
+npm install
+npm run dev
